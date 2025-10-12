@@ -1,26 +1,73 @@
-# Meu Portfólio React
+# React + TypeScript + Vite
 
-Bem-vindo ao meu portfólio pessoal! 🚀  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Este projeto foi desenvolvido com **React** e **TailwindCSS**, utilizando **Vite** como bundler, com o objetivo de apresentar meus projetos, habilidades e experiências de forma moderna, rápida e responsiva.  
+Currently, two official plugins are available:
 
-## Funcionalidades
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **Seção de Sobre Mim** – Uma breve apresentação do meu perfil profissional e competências.  
-- **Projetos** – Demonstração de projetos pessoais e profissionais, com links e descrições detalhadas.  
-- **Habilidades** – Lista visual das minhas principais tecnologias e ferramentas.  
-- **Contato** – Formulário ou links para redes sociais e GitHub.  
-- **Responsivo** – Layout adaptável para desktop, tablet e mobile.  
+## React Compiler
 
-## Tecnologias Utilizadas
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-- [React](https://reactjs.org/) – Biblioteca principal para construção da interface.  
-- [TailwindCSS](https://tailwindcss.com/) – Framework de estilização rápida e moderna.  
-- [Vite](https://vitejs.dev/) – Bundler rápido para desenvolvimento e build.  
-- JavaScript/TypeScript – Para lógica e tipagem (dependendo da versão usada).  
+## Expanding the ESLint configuration
 
-## Instalação e Uso
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-1. Clone o repositório:  
-```bash
-git clone https://github.com/seuusuario/seu-portfolio.git
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
