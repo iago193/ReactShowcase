@@ -60,23 +60,24 @@ export default function SkillsSection() {
 
   return (
     <motion.section
-      className="w-[70%] mx-auto mt-32"
+      className="w-[100%] ml-5 md:mx-auto md:w-[70%] mt-32"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }} // anima uma vez ao aparecer 30% na tela
     >
       <div>
-        <h2 className="text-emerald-400 mb-4 px-2 text-3xl">Minhas Skills & Habilidades</h2>
+        <h2 className="text-emerald-50 px-2 text-3xl">Minhas Skills & Habilidades</h2>
+        <p className="text-emerald-400 px-2 mb-2 text-2xl">Iago Bruno | Desenvolvedor</p>
 
         {/* Linguagens */}
-        <h3 className="text-amber-50 mb-2 text-xl px-2">Languages</h3>
+        <h3 className="text-gray-500 mb-2 text-xl px-2">Languages</h3>
         <div className="flex flex-wrap gap-8 mb-10 justify-center border-4 border-blue-700/50 rounded-2xl p-10">
           {renderImages(languages)}
         </div>
 
         {/* Frameworks / Bibliotecas */}
-        <h3 className="text-amber-50 mb-2 text-xl px-2">Frameworks & Libraries</h3>
+        <h3 className="text-gray-500 mb-2 text-xl px-2">Frameworks & Libraries</h3>
         <div className="flex flex-wrap gap-8 justify-center border-4 border-blue-700/50 rounded-2xl p-10">
           {renderImages(frameworks)}
         </div>
