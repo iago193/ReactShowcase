@@ -8,3 +8,36 @@ body {
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.img-effect {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.img-effect:hover {
+  transform: translate(-5px, -5px); /* sobe e desloca para a esquerda */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(36, 70, 143, 0.288) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 70, 143, 0.288);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(36, 70, 143, 0.288);
+}
+
+
+
