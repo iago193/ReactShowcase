@@ -40,7 +40,7 @@ export default function Hero() {
 
       <div className="w-1/2 p-4 flex justify-center min-w-[450px]">
         <img
-          className="rounded-[100%] size-[400px]"
+          className="rounded-[100%] size-[400px] hidden md:block"
           src={Logo}
           alt="Iago Bruno"
         />

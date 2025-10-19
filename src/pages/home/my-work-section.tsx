@@ -3,12 +3,12 @@ import { FaHtml5,FaCog } from "react-icons/fa";
 
 export default function MyWork() {
   return (
-    <section className="w-[70%] mx-auto flex flex-row mt-130 mb-80">
+    <section className="w-[70%] md:mx-auto flex flex-col md:flex-row mt-150 mb-80">
       {/* Lado esquerdo - Backend e Frontend */}
       <div className="w-1/2 p-4">
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 text-amber-50 rounded-2xl shadow-lg relative"
+          className="bg-blue-700/50 p-10 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px]"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -17,7 +17,7 @@ export default function MyWork() {
           <div className="text-emerald-400 absolute top-6 right-8">
             <FaCog size={60} />
           </div>
-          <h2 className="text-emerald-400 text-3xl">Backend</h2>
+          <h2 className="text-emerald-400 text-2xl">Backend</h2>
           <p className="mt-10">
             Atuo na integração entre o client-side e o banco de dados por meio
             de APIs bem estruturadas e escaláveis. Dou ênfase à performance das
@@ -31,7 +31,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 p-10 mt-5 text-amber-50 rounded-2xl shadow-lg relative"
+          className="bg-blue-700/50 p-10 mt-5 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px]"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -40,7 +40,7 @@ export default function MyWork() {
           <div className="text-emerald-400 absolute top-6 right-8">
             <FaHtml5 size={60} />
           </div>
-          <h2 className="text-emerald-400 text-3xl">Frontend</h2>
+          <h2 className="text-emerald-400 text-2xl">Frontend</h2>
           <p className="mt-10">
             Desenvolvo interfaces modernas, responsivas e de alta performance,
             com foco em interatividade e experiência do usuário. Utilizo
@@ -55,7 +55,7 @@ export default function MyWork() {
 
       {/* Lado direito - Meu trabalho */}
       <motion.div
-        className="w-1/2 p-4 text-2xl"
+        className="w-1/2 p-4 text-2xl min-w-[400px]"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
