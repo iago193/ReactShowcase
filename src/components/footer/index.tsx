@@ -1,25 +1,80 @@
-import { Link } from "react-router-dom";
-import { FaWhatsapp, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Link } from "react-scroll";
+import { FaWhatsapp, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full bottom-0 text-emerald-500 mt-100 bg-blue-700/50">
-      <div className="w-[70%] flex flex-col md:flex-row md:justify-center md:items-center mx-auto">
+    <footer
+      id="footer"
+      className="w-full text-emerald-500 mt-100 bg-blue-700/50"
+    >
+      <div className="text-[20px] md:text-2xl w-[70%] mx-auto flex flex-col md:flex-row md:justify-center md:items-center">
         <div className="w-1/2 mt-4">
-          <h4 className="text-neutral-400">Web Developer</h4>
+          <h4 className="text-neutral-500">Web Developer</h4>
           <h2>Iago Bruno | Developer</h2>
-            <i className="flex gap-4 mt-5 mb-10">
-                <FaWhatsapp size={30} />
-                <FaGithub size={30} />
-                <FaLinkedin size={30} />
-            </i>
+          <ul className="flex gap-4 mt-5 mb-10">
+            <li>
+              <a
+                href="https://wa.me/5584991454957"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp size={40} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/iago193"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={40} />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/iago-bruno-aa1630355/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={40} />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:iago.silva6969@gmail.com">
+                <FaEnvelope size={40} />
+              </a>
+            </li>
+          </ul>
         </div>
-        <div className="w-1/2 flex md:justify-end">
+        <div className="w-1/2 md:mt-[-100px] flex md:justify-end">
           <nav className="flex gap-4">
-            <Link to="/"> Home </Link>
-            <Link to="/"> Sobre </Link>
-            <Link to="/"> Projetos </Link>
-            <Link to="/"> Contato </Link>
+            <ul className="flex gap-4">
+              <li>
+                <Link
+                  to="hero-section"
+                  smooth={true}
+                  duration={500}
+                  offset={-180} // ajusta a altura por causa do header fixo
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="my-work" smooth={true} duration={500} offset={-300}>
+                  Sobre
+                </Link>
+              </li>
+              <li>
+                <Link to="projetos" smooth={true} duration={500} offset={-100}>
+                  Projetos
+                </Link>
+              </li>
+              <li>
+                <Link to="contato" smooth={true} duration={500} offset={-100}>
+                  Contato
+                </Link>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>

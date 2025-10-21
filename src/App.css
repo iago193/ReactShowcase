@@ -9,6 +9,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .img-effect {
   transition: transform 0.3s ease; /* animação suave */
 }

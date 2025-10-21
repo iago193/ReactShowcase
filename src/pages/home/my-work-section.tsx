@@ -3,12 +3,12 @@ import { FaHtml5,FaCog } from "react-icons/fa";
 
 export default function MyWork() {
   return (
-    <section className="w-[70%] md:mx-auto flex flex-col md:flex-row mt-150 mb-80">
+    <section id="my-work" className="w-full md:w-[70%] md:mx-auto flex flex-col xl:flex-row mt-150 mb-80">
       {/* Lado esquerdo - Backend e Frontend */}
       <div className="w-1/2 p-4">
         {/* Backend */}
         <motion.div
-          className="bg-blue-700/50 p-10 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px]"
+          className="bg-blue-700/50 p-10 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px] lg:min-w-[700px]"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -31,7 +31,7 @@ export default function MyWork() {
 
         {/* Frontend */}
         <motion.div
-          className="bg-blue-700/50 p-10 mt-5 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px]"
+          className="bg-blue-700/50 p-10 mt-5 text-amber-50 rounded-2xl shadow-lg relative min-w-[400px] lg:min-w-[700px]"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -55,7 +55,7 @@ export default function MyWork() {
 
       {/* Lado direito - Meu trabalho */}
       <motion.div
-        className="w-1/2 p-4 text-2xl min-w-[400px]"
+        className="w-1/2 p-4 text-2xl min-w-[400px] lg:min-w-[700px]"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
