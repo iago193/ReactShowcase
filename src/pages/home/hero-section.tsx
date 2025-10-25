@@ -3,11 +3,11 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section id="hero-section" className="flex flex-col w-[70%] md:mx-auto md:flex-row mt-48">
-      <div className="w-1/2 p-4 min-w-[400px]">
+    <section id="hero-section" className="flex flex-col md:flex-row mt-48">
+      <div className="xl:w-1/2 p-4 min-w-[700px] xl:min-w-[400px]">
         <p className="text-gray-800 mb-5">Web Developer</p>
-        <h2 className="text-amber-50 font-bold text-7xl">Olá, tudo bom?</h2>
-        <h2 className="text-emerald-400 italic drop-shadow-lg font-bold text-7xl my-2">
+        <h2 className="text-amber-50 text-7xl">Olá, tudo bom?</h2>
+        <h2 className="text-emerald-400 italic drop-shadow-lg text-7xl my-2">
           Sou o Iago Bruno
         </h2>
         <p className="text-amber-50 mt-10 text-[25px]">
@@ -38,9 +38,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="w-1/2 p-4 flex justify-center min-w-[500px] lg:min-w-[600px]">
+      <div className="xl:w-1/2 p-4 flex justify-center min-w-[500px] lg:min-w-[600px]">
         <img
-          className="rounded-[100%] size-[500px] lg:size-[600px] hidden md:block"
+          className="rounded-[100%] size-[500px] lg:size-[600px] hidden xl:block"
           src={Logo}
           alt="Iago Bruno"
         />

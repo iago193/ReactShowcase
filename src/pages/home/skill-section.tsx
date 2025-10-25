@@ -115,7 +115,7 @@ export default function SkillsSection() {
   };
 
   return (
-    <section className="w-full md:w-[70%] mx-auto mt-32">
+    <section className="w-full mt-32">
       <h2 className="text-emerald-50 px-2 text-2xl">
         Minhas Skills & Habilidades
       </h2>
