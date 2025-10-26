@@ -5,7 +5,7 @@ import MyProject from "./my-projects";
 
 export default function Home() {
   return (
-    <main className="xl:w-[70%] w-[100%] md:mx-auto border-2 border-amber-100 overflow-x-hidden">
+    <main className="md:w-[100%] lg:w-[85%] xl:w-[80%] 2xl:w-[70%] md:mx-auto overflow-x-hidden border-4 border-amber-200">
       <Hero />
       <MyWork />
       <SkillsSection />
