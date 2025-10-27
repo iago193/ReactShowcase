@@ -3,26 +3,36 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section id="hero-section" className="flex flex-col md:flex-row mt-48">
-      <div className="xl:w-1/2 p-4 min-w-[700px] xl:min-w-[400px]">
-        <p className="text-gray-800 mb-5">Web Developer</p>
-        <h2 className="text-amber-50 text-7xl">Olá, tudo bom?</h2>
-        <h2 className="text-emerald-400 italic drop-shadow-lg text-7xl my-2">
+    <section
+      id="hero-section"
+      className="w-full flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 mt-80 mb-[500px]"
+    >
+      {/* Texto */}
+      <div className="lg:w-1/2 w-full text-center lg:text-left">
+        <p className="text-gray-300 mb-4 text-lg">Web Developer</p>
+
+        <h2 className="text-amber-50 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          Olá, tudo bom?
+        </h2>
+
+        <h2 className="text-emerald-400 italic drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-3">
           Sou o Iago Bruno
         </h2>
-        <p className="text-amber-50 mt-10 text-[25px]">
+
+        <p className="text-amber-50 mt-6 text-[17px] sm:text-[20px] md:text-[22px] leading-relaxed">
           Desenvolvedor Full Stack especializado em JavaScript/TypeScript, com
           foco em soluções robustas usando Node, React, Next e MySql/MongoDb.
         </p>
 
-        <div className="flex gap-10 mt-10">
+        {/* Botões */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-10">
           <a
             href="https://www.linkedin.com/in/iago-bruno-aa1630355/"
             target="_blank"
             rel="noopener noreferrer"
-            className="outline-offset-6 w-42 gap-1 outline-4 outline-emerald-400 bg-emerald-400 rounded-2xl flex items-center py-4 px-10 hover:bg-emerald-500 transition-colors duration-300"
+            className="w-full sm:w-44 flex justify-center items-center gap-2 bg-emerald-400 text-black font-medium rounded-2xl py-3 hover:bg-emerald-500 transition-all"
           >
-            <FaLinkedin className="text-3xl text-black" />
+            <FaLinkedin className="text-2xl" />
             Linkedin
           </a>
 
@@ -30,17 +40,18 @@ export default function Hero() {
             href="https://github.com/iago193"
             target="_blank"
             rel="noopener noreferrer"
-            className="outline-offset-6 w-42 gap-1 outline-4 outline-emerald-400 bg-emerald-400 rounded-2xl flex items-center py-4 px-10 hover:bg-emerald-500 transition-colors duration-300"
+            className="w-full sm:w-44 flex justify-center items-center gap-2 bg-emerald-400 text-black font-medium rounded-2xl py-3 hover:bg-emerald-500 transition-all"
           >
-            <FaGithub className="text-3xl text-black" />
+            <FaGithub className="text-2xl" />
             Github
           </a>
         </div>
       </div>
 
-      <div className="xl:w-1/2 p-4 flex justify-center min-w-[500px] lg:min-w-[600px]">
+      {/* Imagem */}
+      <div className="lg:w-1/2 w-full flex justify-center">
         <img
-          className="rounded-[100%] size-[500px] lg:size-[600px] hidden xl:block"
+          className="rounded-full max-w-[450px] w-[90%] sm:w-[60%] lg:w-[500px] shadow-lg"
           src={Logo}
           alt="Iago Bruno"
         />

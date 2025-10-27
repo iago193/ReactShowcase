@@ -3,9 +3,9 @@ import { FaHtml5,FaCog } from "react-icons/fa";
 
 export default function MyWork() {
   return (
-    <section id="my-work" className="w-full flex flex-wrap mt-150 mb-80 justify-center">
+    <section id="my-work" className="w-full flex flex-col lg:flex-row justify-center items-start gap-10 mt-[150px] mb-[80px]">
       {/* Lado esquerdo - Backend e Frontend */}
-      <div className="md:w-[90%] lg:w-[85%] xl:w-[90%] 2xl:w-1/2  md:p-4 min-w-[400px]">
+      <div className="lg:w-[100%] xl:w-[90%] 2xl:w-1/2 p-4 min-w-[400px]">
         {/* Backend */}
         <motion.div
           className="bg-blue-700/50 p-10 text-amber-50 rounded-2xl shadow-lg relative"
@@ -55,7 +55,7 @@ export default function MyWork() {
 
       {/* Lado direito - Meu trabalho */}
       <motion.div
-        className="md:w-[90%] lg:w-[85%] xl:w-[90%] 2xl:w-1/2 md:mx-4  md:p-4 min-w-[400px] md:text-2xl"
+        className="mlg:w-[100%] xl:w-[90%] 2xl:w-1/2 p-4 min-w-[400px] md:text-2xl"
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
