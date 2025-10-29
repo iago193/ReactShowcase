@@ -14,7 +14,7 @@ export function Header() {
                 to="hero-section"
                 smooth={true}
                 duration={500}
-                offset={-180} // ajusta a altura por causa do header fixo
+                offset={-300} // ajusta a altura por causa do header fixo
               >
                 Home
               </Link>
@@ -25,7 +25,7 @@ export function Header() {
               </Link>
             </li>
             <li>
-              <Link to="projetos" smooth={true} duration={500} offset={-100}>
+              <Link to="projects" smooth={true} duration={500} offset={-100}>
                 Projetos
               </Link>
             </li>

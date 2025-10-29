@@ -1,7 +1,7 @@
 import SkillsSection from "./skill-section";
 import MyWork from "./my-work-section";
 import Hero from "./hero-section";
-import MyProject from "./my-projects";
+import MyProject from "./my-projects-section";
 
 export default function Home() {
   return (

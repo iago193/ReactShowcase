@@ -3,7 +3,7 @@ import { FaHtml5,FaCog } from "react-icons/fa";
 
 export default function MyWork() {
   return (
-    <section id="my-work" className="w-full flex flex-col lg:flex-row justify-center items-start gap-10 mt-[150px] mb-[80px]">
+    <section id="my-work" className="w-full flex flex-col lg:flex-row justify-center items-start gap-10 md:mt-72 mt-32 mb-[80px]">
       {/* Lado esquerdo - Backend e Frontend */}
       <div className="lg:w-[100%] xl:w-[90%] 2xl:w-1/2 p-4 min-w-[400px]">
         {/* Backend */}

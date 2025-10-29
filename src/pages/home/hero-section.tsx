@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero-section"
-      className="w-full flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 mt-80 mb-[500px]"
+      className="w-full flex flex-col-reverse lg:flex-row justify-center items-center lg:items-start gap-10 px-6 md:mt-80 mt-32 md:mb-[500px] mb-60"
     >
       {/* Texto */}
       <div className="lg:w-1/2 w-full text-center lg:text-left">
